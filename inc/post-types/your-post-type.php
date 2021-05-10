@@ -1,10 +1,11 @@
 <?php
 /**
- * @package air-light
  * @Author: Niku Hietanen
  * @Date: 2020-02-18 15:06:45
- * @Last Modified by: Timi Wahalahti
- * @Last Modified time: 2020-10-15 17:08:38
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-05-04 11:13:10
+ *
+ * @package air-light
  **/
 
 namespace Air_Light;
@@ -40,18 +41,18 @@ class Your_Post_Type extends Post_Type {
       'labels'              => $generated_labels,
       'description'         => '',
       'menu_icon'           => null,
-      'rewrite'             => [
-        'with_front'  => false,
-        'slug'        => 'your-post-type',
-      ],
-      'supports'            => [ 'title', 'editor', 'thumbnail', 'revisions' ],
-      'taxonomies'          => [],
       'public'              => false,
       'has_archive'         => false,
       'exclude_from_search' => false,
       'show_ui'             => true,
       'show_in_menu'        => true,
       'show_in_rest'        => false,
+      'rewrite'             => [
+        'with_front'  => false,
+        'slug'        => 'your-post-type',
+      ],
+      'supports'            => [ 'title', 'editor', 'thumbnail', 'revisions' ],
+      'taxonomies'          => [],
     ];
 
     $this->register_wp_post_type( $this->slug, $args );
