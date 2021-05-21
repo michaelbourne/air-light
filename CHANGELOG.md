@@ -1,3 +1,67 @@
+### 7.5.0: 2021-05-21
+
+#### Major update
+
+* Add social media accounts to theme settings #109
+* Add custom setting groups support #108
+* Automate acf block icon from svg file #107
+* Check if it's allowed to show this block in the context #106
+* Add error block functionality #105
+* Wrap theme settings to after_setup_theme action, fix filter name #104
+* Update nav walker to 4.3.0: Accessibility, schema and security updates #103
+* Remove deprecated blocks, Fixes #93 (thanks @LukaszJaro!)
+* Fix too specific paragraph styles (moved from gutenberg/block/core-paragraph.scss to gutenberg/formatting/_paragraph.scss)
+* Add cubic-brezier() mixin
+* Bump tested WP version to 5.7.2
+
+### 7.4.5: 2021-05-20
+
+* Add example block icon SVG for ACF Gutenberg block init
+* Wrap theme settings to after_setup_theme action, fix filter name #104
+
+### 7.4.4: 2021-05-19
+
+* Fix alignwide and alignfull variables in front end
+
+### 7.4.3: 2021-05-19
+
+* Add variables $width-full and $width-wide for default Gutenberg blocks styling
+* Fix typo in code comment
+* Fix preformatted text alignment in Gutenberg
+
+### 7.4.2: 2021-05-19
+
+* Improve block functionality #102
+
+### 7.4.1: 2021-05-18
+
+* Deprecate modules SCSS
+* Example of your next ACF Gutenberg block
+
+### 7.4.0: 2021-05-18
+
+#### Major Gutenberg update
+
+* This version adds ACF-Gutenberg blocks (PR: Moving on from modular content to ACF-Gutenberg blocks #100)
+* Fixes for stylelint (most notably getting rid of vendor prefixes in styles)
+* Fully working editor styles
+* Editor JS and editor lazyload support
+* Deprecate modular-content.php
+* Remove demo content from the theme (from now on it's a separate WordPress plugin)
+* Bunch of small fixes
+
+### 7.3.1: 2021-05-12
+
+* Fix: Add missing autoprefixer for dev styles gulp task
+
+### 7.3.0: 2021-05-12
+
+* Fix select dropdowns showing toggle icon twice (`appearance: none;` is well supported by Safari 14)
+
+### 7.2.9: 2021-05-11
+
+* Fix 404, Fixes #99
+
 ### 7.2.8: 2021-05-04
 
 * Consistency in file headers
@@ -23,7 +87,7 @@
 * Fix issue with setLazyLoadedFigureWidth not imported properly
 * Contributing instructions up to date according to the latest version of dudestack
 
-### 7.2.8: 2021-04-22
+### 7.3.1: 2021-04-22
 
 * Mobile nav overflow fix #95 (thanks @Tumppex and congrats for the first pull request!)
 * Documenting code: Add comment about Gravity Forms with ajax

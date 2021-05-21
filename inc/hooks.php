@@ -22,6 +22,7 @@ namespace Air_Light;
  */
 require get_theme_file_path( 'inc/hooks/general.php' );
 add_action( 'widgets_init', __NAMESPACE__ . '\widgets_init' );
+add_filter( 'air_helper_custom_settings_post_ids', __NAMESPACE__ . '\custom_settings_post_ids' );
 
 /**
  * Scripts and styles associated hooks
@@ -41,7 +42,15 @@ require get_theme_file_path( 'inc/hooks/gutenberg.php' );
 add_filter( 'allowed_block_types', __NAMESPACE__ . '\allowed_block_types', 10, 2 );
 add_filter( 'use_block_editor_for_post_type', __NAMESPACE__ . '\use_block_editor_for_post_type', 10, 2 );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\register_block_editor_assets' );
+add_filter( 'block_editor_settings', __NAMESPACE__ . '\remove_gutenberg_inline_styles', 10, 2 );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_editor_styles' );
+
+/**
+ * ACF blocks
+ */
+require get_theme_file_path( 'inc/hooks/acf-blocks.php' );
+add_filter( 'block_categories', __NAMESPACE__ . '\acf_blocks_add_category_in_gutenberg', 10, 2 );
+add_action( 'acf/init', __NAMESPACE__ . '\acf_blocks_init' );
 
 /**
  * Form related hooks
